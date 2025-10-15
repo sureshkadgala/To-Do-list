@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="card" role="region" aria-label="To-do list">
+      <h2>TO-DO LIST</h2>
+      <div class="controls">
+        <input
+          type="text"
+          id="input"
+          aria-label="Task description"
+          placeholder="Add a new task..."
+        />
+        <button id="btn" aria-label="Add task">Add</button>
+      </div>
+      <ol id="taskList" aria-live="polite"></ol>
+      <div class="muted">Tip: click X to remove a task.</div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,110 @@
+:root {
+  --bg: #f3f4f6;
+  --card: #ffffff;
+  --accent: #4f46e5;
+  --danger: #ef4444;
+  --muted: #6b7280;
+}
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+body {
+  margin: 0;
+  font-family: Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+  background: var(--bg);
+  color: #111827;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 24px;
+}
+.card {
+  background: var(--card);
+  width: 100%;
+  max-width: 520px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(16, 24, 40, 0.08);
+  padding: 20px 18px;
+}
+h2 {
+  margin: 0 0 12px 0;
+  font-size: 20px;
+  letter-spacing: 0.2px;
+}
+.controls {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 14px;
+}
+input[type="text"] {
+  flex: 1;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #e6e7ea;
+  font-size: 14px;
+  outline: none;
+  transition: box-shadow 0.15s, border-color 0.15s;
+}
+input[type="text"]:focus {
+  box-shadow: 0 0 0 4px rgba(79, 70, 229, 0.08);
+  border-color: var(--accent);
+}
+button#btn {
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  padding: 10px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+}
+button#btn:active {
+  transform: translateY(1px);
+}
+ol#taskList {
+  list-style: decimal;
+  margin: 0;
+  padding: 0 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+ol#taskList li {
+  background: #fbfdff;
+  border: 1px solid #eef2ff;
+  padding: 10px 12px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  font-size: 14px;
+}
+ol#taskList li button {
+  background: transparent;
+  border: none;
+  color: var(--danger);
+  font-weight: 700;
+  cursor: pointer;
+  padding: 6px 8px;
+  border-radius: 6px;
+}
+ol#taskList li button:hover {
+  background: rgba(239, 68, 68, 0.08);
+}
+.muted {
+  color: var(--muted);
+  font-size: 13px;
+  margin-top: 8px;
+}
+@media (max-width: 420px) {
+  .card {
+    padding: 16px;
+  }
+  button#btn {
+    padding: 9px 10px;
+  }
+}
